@@ -1,2 +1,2 @@
-# C-
+# C#-obiektowe
 C#
