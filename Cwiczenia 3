@@ -1,0 +1,307 @@
+//Console.WriteLine("podaj ile ma byc elementów");
+// n = int.Parse(Console.ReadLine());
+// zadanie 1
+
+/*int[] tablica = new int[n];
+for (int i =0; i<tablica.Length; i++)
+{
+    Console.WriteLine("podaj liczbe ");
+    tablica[i] = int.Parse(Console.ReadLine());
+}
+ 
+Console.WriteLine();
+ 
+foreach(int i in tablica)
+    Console.WriteLine(i);
+Console.ReadKey();
+*/
+
+// zadanie 2 do poprawy
+
+/* int[] tab1 = { 11, 22, 33, 44, 55, 66, -77, 2, -99 };
+int[] tab2 = new int[10];
+for (int i = 0; i < tab1.Length; i++)
+{
+    if (tab1[i] >= 0)
+        tab2 = tab1;
+}
+foreach (int x in tab2)
+{
+    Console.Write("{0}, ", x);
+}
+/*
+
+// zadanie 3
+
+/*Console.WriteLine("podaj jakie ma byc n");
+int n = int.Parse(Console.ReadLine());
+int[] tablica = new int[n];
+
+for (int i = 0; i < tablica.Length; i++)
+{
+    Console.WriteLine("podaj liczbe ");
+    tablica[i] = int.Parse(Console.ReadLine());
+}
+Console.WriteLine();
+
+
+int najwiekszy = tablica[0];
+for (int j = 0; j < tablica.Length; j++)
+{
+    if (tablica[j] >= najwiekszy)
+    {
+        najwiekszy = tablica[j];
+    }
+}
+
+Console.WriteLine("najwiekszy {0} ", najwiekszy);
+Console.WriteLine("Pozycja {0} ",Array.IndexOf(tablica,najwiekszy));
+
+int najmniejszy = tablica[0];
+for (int j = 0; j < tablica.Length; j++)
+{
+    if (tablica[j] <= najmniejszy)
+    {
+        najmniejszy = tablica[j];
+    }
+}
+
+Console.WriteLine("najwiekszy {0} ", najmniejszy);
+Console.WriteLine("Pozycja {0} ", Array.IndexOf(tablica, najmniejszy));
+
+double srednia=0;
+
+for(int i=0; i<tablica.Length;i++)
+{
+    srednia += tablica[i];
+}
+Console.WriteLine("srednia wynosi {0} ",srednia/2);
+
+int iledodatnich = 0;
+for (int i = 0; i < tablica.Length; i++)
+{
+    if (tablica[i] >= 0)
+    {
+        iledodatnich++;
+    }
+
+
+
+ }
+Console.WriteLine("Liczb dodatnich jest {0} ", iledodatnich);
+*/
+
+// zadanie 4
+
+/*
+ Random rand = new Random();
+
+int i;
+int j;
+int k;
+int[] tab;
+tab = new int[100];
+
+for (i = 0; i < 100; i++)
+{
+    tab[i] = rand.Next(1, 1000);
+    Console.Write("{0,8}", tab[i]);
+}
+
+Console.WriteLine("Liczby pierwsze w powyzszym zbiorze: ");
+
+int suma = 0;
+for (j = 0; j < tab.Length; j++)
+{
+    for (k = 2; k < tab[j]; k++)
+
+        if (tab[j] % k == 0)
+        {
+
+            tab[j] = 0;
+            break;
+        }
+    if (k == tab[j])
+        Console.Write("\n{0,8}", tab[j]);
+    {
+        if (tab[j] > 0)
+            tab[j] = 0 + 1;
+        suma = suma + tab[j];
+
+    }
+}
+Console.WriteLine("\n     W podanym zakresie znajduje sie {0} liczb pierwszych.", suma);
+
+
+Console.ReadKey();
+*/
+
+
+// zadanie 5
+/*
+ Console.WriteLine("podaj liczbe ");
+int n = int.Parse(Console.ReadLine());
+
+int[] tab1 = new int[n];
+
+int[] tab2 = new int[n];
+
+for(int i=0;i<n; i++)
+{
+    Console.WriteLine("podaj liczbe ");
+    tab1[i] =int.Parse( Console.ReadLine());
+}
+
+Array.Copy(tab1,n-1,tab2,0,1);
+Array.Copy(tab1, 0, tab2, 1, n-1);
+foreach (int x in tab2)
+Console.WriteLine(x);
+*/
+
+// zadanie 6
+
+
+/*int[,] table = { { 1, 2, 3, 4, 5, }, { 7, 8, 9, 6, 4 }, { 8, 9, 5, 6, 7 }, { 8, 9, 3, 4, 21 }, { 9, 10, 5, 6, 7 } };
+
+Console.WriteLine("Tablica to: ");
+for (int a = 0; a < table.GetLength(0); a++)
+{
+    for (int b = 0; b < table.GetLength(1); b++)
+    {
+        Console.Write(table[a, b]+" ");
+    }
+    Console.WriteLine();
+}
+
+int sum = 0;
+for (int i = 0; i < table.GetLength(0); i++)
+{
+    sum += table[i, i];
+}
+Console.Write("Suma elementów na przekątnej to: " + sum);
+
+*/
+
+// zadanie 7
+
+
+
+/*
+ int[,] macierz1 =new int[2,3] { { 1, 2, 3 }, { 4, 5, 6 } };
+int[,] macierz2 = new int[2,3] { { 1, 2, 3 }, { 4, 5, 6 } };
+int[,] wynik = new int[2,3];
+
+for (int i = 0; i < macierz1.GetLength(0); i++)
+{
+    for (int j = 0; j<macierz1.GetLength(1); j++)
+    { 
+    Console.Write(macierz1[i, j]+" ");
+    }
+    Console.WriteLine();
+}
+
+Console.WriteLine();
+
+for (int i = 0; i < 2; i++)
+{
+    for (int j = 0; j < 3; j++)
+    {
+        wynik[i, j] = macierz1[i,j] + macierz2[i,j];
+     
+
+
+    }
+    
+}
+Console.WriteLine("Macierz wynikowa ");
+for (int i = 0; i < wynik.GetLength(0); i++)
+{
+    for (int j = 0; j < wynik.GetLength(1); j++)
+    {
+
+        Console.Write(wynik[i, j]+" ");
+
+
+    }
+    Console.WriteLine();
+}
+*/
+
+//zadanie 9
+
+/*
+ Console.WriteLine("Podaj jakis tekst :");
+
+string tekst = Console.ReadLine();
+int ileslow = 1;
+
+foreach(char spacja in tekst)
+    if (spacja==' ')
+    {
+        ileslow++;
+    }
+
+Console.WriteLine("Ilość słów wynosi {0}", ileslow);
+
+*/
+
+/*
+ Console.WriteLine("Podaj dzien miesiac i rok urodzenia po myślniku ");
+string data = Console.ReadLine();
+
+Console.WriteLine(data);
+
+string miesiac = data.Substring(3, 2);
+
+
+int liczba = int.Parse(miesiac);
+
+Console.WriteLine(liczba);
+
+switch(liczba)
+{
+    case 01:
+        Console.WriteLine("Styczeń");
+        break;
+    case 02:
+        Console.WriteLine("Luty");
+        break;
+    case 03:
+        Console.WriteLine("Marzec");
+        break;
+    case 04:
+        Console.WriteLine("Kwiecien");
+        break;
+    case 05:
+        Console.WriteLine("Maj");
+        break;
+    case 06:
+        Console.WriteLine("czerwie");
+        break;
+    case 07:
+        Console.WriteLine("Lipiec");
+        break;
+    case 08:
+        Console.WriteLine("sierpień");
+        break;
+    case 09:
+        Console.WriteLine("Wrzesień");
+        break;
+    case 10:
+        Console.WriteLine("Pażdziernik");
+        break;
+    case 11:
+        Console.WriteLine("Listopad");
+        break;
+    case 12:
+        Console.WriteLine("Grudzień");
+        break;
+    default:
+        Console.WriteLine("Nieznana wartość");
+        break;
+
+
+}
+*/
+
+
