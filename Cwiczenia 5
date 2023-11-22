@@ -1,0 +1,221 @@
+// zadanie 1
+
+/*
+    class Program
+{
+    static double Celciusza(double F)
+    {
+        return ((F - 32) / (1.8));
+
+    }
+
+    static void Main(string[] args)
+    {
+        double x;
+        Console.WriteLine("Podaj Temperature w stopniach Fahrenheita");
+        x = double.Parse(Console.ReadLine());
+        Console.WriteLine(Celciusza(x));
+        Console.ReadKey();
+
+    }
+}
+
+ */
+
+
+// zadanie 2
+/*class Program
+{
+    static double Spraw(double a,double b,double x)
+    {
+        if (a < x && b > x)
+        {
+            return 1;
+        }
+        else
+            return 0;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("podaj 3 liczby ");
+        double a = double.Parse(Console.ReadLine());
+        double b = double.Parse(Console.ReadLine());
+        double x = double.Parse(Console.ReadLine());
+        if (Spraw(a, b, x) == 0)
+            Console.WriteLine("x nie nalezy do przedzialu otwartego");
+        else Console.WriteLine("x nalezy4 do przedzialu");
+        Console.ReadKey();
+    }
+    
+
+
+
+}
+*/
+
+
+// zadanie 4
+
+
+/*  class Program
+{
+  static int[] PoMnozeniu(int mnoznik1, int[] tab)
+  {
+
+      int[] tab1 = { 1, 4, 6, 8, 2 };
+
+      for (int i = 0; i < tab1.Length; i++)
+      {
+          tab1[i] = tab1[i] * mnoznik1;
+          Console.Write(tab1[i]+ " ");
+      }
+      return tab1;
+  }
+
+  static void Main(string[] args)
+  {
+      int[] tab2 = new int[5];
+      Console.WriteLine("Podaj mnoznik");
+      int mnoznik;
+      mnoznik = int.Parse(Console.ReadLine());
+      Console.WriteLine("Po pomnozeniu: ");
+      int[] tab = PoMnozeniu(mnoznik, tab2);
+
+
+      Console.ReadKey();
+  }
+
+}
+*/
+
+
+
+// zadanie 5
+
+
+
+/* class Program
+{
+    static void Rysuj(int[,] tab )
+    {
+        
+        for (int i=0; i<tab.GetLength(0); i++)
+        {
+            for(int j=0;j<tab.GetLength(1);j++)
+            {
+                Console.Write("{0,-8}", "*");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("podaj dlugosc i szerokosc ");
+        int x = int.Parse(Console.ReadLine());
+        int y = int.Parse(Console.ReadLine());
+        int[,] tab1 = new int[x, y];
+        Rysuj(tab1);
+        Console.WriteLine();
+        int[,] tab2 = new int[y,x];
+        Rysuj(tab2);
+
+    }
+
+}
+
+*/
+
+
+// zadanie 6 
+
+/*class Program
+{
+    static void Oblicz(int x, int n)
+    {
+        int W = 0;
+        for (int i = 1; i <= n; i++)
+        {
+            W += (x + i);
+        }
+        Console.WriteLine("wartość W wynosi {0}", W);
+    }
+    static void Main(string[] args)
+    {
+        Console.WriteLine("podaj x");
+        int z = int.Parse(Console.ReadLine());
+        Console.WriteLine("podaj n");
+        int c = int.Parse(Console.ReadLine());
+        Oblicz(z, c);
+        Console.ReadKey();
+    }
+}
+
+*/
+
+
+// zadanie 7
+
+
+/* class Program
+{
+    static void Zlicz(int x)
+    {
+        int suma = 0;
+        while (x != 0)
+        {
+            suma += x % 10;
+            x /= 10;
+        }
+        Console.WriteLine(suma);
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Podaj liczbe");
+        int a = int.Parse(Console.ReadLine());
+        Zlicz(a);
+
+
+    }
+}
+
+*/
+
+// zadanie 9
+/* class Program
+{
+    static int ciag(int n)
+    {
+        if (n == 0 || n == 1) return n;
+        else if(n==2) return 1;
+        else return ciag(n -1)+ ciag(n - 2);
+
+    }
+
+    static void fib(int x)
+    {
+        int a = 0, b = 1;
+
+        for (int i = 0; i < x; i++)
+        {
+            
+            b += a; 
+            a = b - a; 
+        }
+        Console.WriteLine(a);
+    }
+    static void Main(string[] args)
+    {
+        Console.WriteLine("podaj liczbe ");
+        int x = int.Parse(Console.ReadLine());
+        Console.WriteLine(ciag(x));
+
+        Console.WriteLine("podaj liczbe ");
+        int y = int.Parse(Console.ReadLine());
+        fib(y);
+    }
+}
+*/
+
